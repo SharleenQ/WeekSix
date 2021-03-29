@@ -45,3 +45,69 @@ function greet() {
 // 2. Code execution is synchronous.
 // 3. A function invocation creates a stack frame that occupies a temporary memory.
 // 4. It works as a LIFO — Last In, First Out data structure.
+
+//  Javascript And memory
+
+//y// declare some variables and initialize them
+// var a = 5
+// let b = 'xy'
+// const c = true
+
+// // assign new values
+// a = 6
+// b = b + 'z'
+// c = false // TypeError: Assignment to constant variable
+
+// As programmers, declaring variables, initializing them (or not), and assigning them new values later on is something we do on a daily basis.
+// But what actually happens when do this? How does JavaScript in particular handle such basic functionality internally? And more importantly, how does it benefit us as programmers to understand
+ // the underlying minutiae of JavaScript?
+
+ // Primitives in JAvascript
+// let myNumber = 23 
+
+// address: 0012ccgwh80  // also NEWVAR
+// value: 23
+
+// Since myNumber equals the memory address “0012CCGWH80”, 
+// assigning it to newVar assigns “0012CCGWH80” to newVar.
+
+//my number = myNumber + 1 
+
+//heres another example
+// let myString = 'abc'
+// myString = myString + 'd'
+
+// what is the outcome ? =new location in the memory address
+// JavaScript’s memory model: the call stack and the heap
+
+//call stack :
+// myString = 'abcd'
+// newVar = 23
+// myNumber = 24
+
+// heap : 
+
+// The heap is where non-primitives are stored. The key difference is that the heap can store unordered data that can grow
+// dynamically—perfect for arrays and objects.
+
+//how are non primitives stored ? reference , Garbage Collection 
+
+// what is the meaning of CHANGE ??
+
+//A mistake is to interpret “change” as a change in value. A JS programmer who interprets
+// “change” this way will do something like this:
+
+
+//let numbers = []
+// sum = 1 + 2 + 3 + 4 + 5let numbers = []
+// numbers.push(1)
+// numbers.push(2)
+// numbers.push(3)
+// numbers.push(4)
+// numbers.push(5)
+ 
+// console.log(numbers   // array 
+
+//const myArray = [] convert to non array
+
+// data manipulation my Array = ['a']
