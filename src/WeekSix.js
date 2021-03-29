@@ -111,3 +111,70 @@ function greet() {
 //const myArray = [] convert to non array
 
 // data manipulation my Array = ['a']
+
+// ### 30th March 2020
+
+// Prototypal Inheritance Visualized.
+
+function Dog(name, breed, colour) {
+this.name = name
+this.breed = breed
+this.color = color
+}
+this.bark = function () {
+    return 'woof'
+}
+// console.log(Dog)
+
+const student = {
+   name: "bob",
+   year: "one",
+   class: "SDV503"   // this is a const object 
+}
+
+console.log(student.name)
+student.name = "matt"
+console.log (student.name)  // changing the property value of the object changing the name from bob to matt.
+
+const newObj = {} // to declare a object 
+
+const info = {
+    fistNAme: 'john',
+    lastName: 'smith',
+    datOfBirth: '1st Dec 2000',
+    friends: ['bob', 'tom']    // object : the friend property has a n array which means will store in the heap
+}
+
+console.log(info.friends[0])
+
+const example = {
+    nestedObj: {
+        name: 'Alex'  //  this is what a nested object looks like.
+    } }
+
+    console.log(example)
+ 
+    const anotherObj = new Object() //
+    console.log(anotherObj)
+     
+    const propsName ='firstName'
+     
+    const objOne = {        // object with array
+        [propsName.toUpperCase()]: 'Alex'
+    }
+     
+    console.log(objOne)
+
+    
+    const objTwo = {​           //function and an object AKA a method example
+    firstName: 'Alex',
+    lastName: 'Ali',
+    printFullName() {​ //Function here
+        return `${​this.firstName}​ ${​this.lastName}​`
+    }​
+}​
+console.log(objTwo.printFullName())
+console.log(objTwo['firstName'])
+console.log(objTwo.hasOwnProperty('lastName')) // confirming if object has lastname property in object 
+console.log(objTwo.hasOwnProperty('address'))
+    
